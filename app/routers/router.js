@@ -9,7 +9,7 @@ var app = app || {};
 		},
 		
 		setFilter: function(params) {
-			window.filter = params.trim() || '';
+			window.filter = (params ? params.trim() : '');
 			app.todoList.trigger('reset');
 		}
 	});
